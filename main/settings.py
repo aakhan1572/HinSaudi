@@ -85,7 +85,7 @@ WSGI_APPLICATION = "main.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-""" 
+
 DATABASES = {
     "default": {
         'ENGINE': env('ENGINE'),
@@ -96,7 +96,7 @@ DATABASES = {
         "PORT" : env("DB_PORT"),
     }
 }
- """
+
 AUTH_USER_MODEL = env('AUTH_USER_MODEL')
 
 #STATICFILES_STORAGE= config('STATICFILES_STORAGE')
@@ -186,7 +186,7 @@ STATICFILES_STORAGE=env('STATICFILES_STORAGE')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 #print(f"AWS_SECRET_ACCESS_KEY = {AWS_SECRET_ACCESS_KEY}")
 
-
+""" 
 DATABASES = {
     "default": {
         'ENGINE': env('ENGINE'),
@@ -199,7 +199,7 @@ DATABASES = {
 
 
 
-""" # SITE SECURITY (security)
+# SITE SECURITY (security)
 SECURE_SSL_REDIRECT = False
 if DEBUG is False:
     #SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
