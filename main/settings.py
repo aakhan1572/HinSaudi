@@ -186,14 +186,14 @@ STATICFILES_STORAGE=env('STATICFILES_STORAGE')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 #print(f"AWS_SECRET_ACCESS_KEY = {AWS_SECRET_ACCESS_KEY}")
 
+
 DATABASES = {
     "default": {
-        "ENGINE" : env('ENGINE'),
-        "NAME" : env('DB_NAME'),
-        "USER" : env('DB_USER'),
-        "PASSWORD" : env('DB_PASSWORD'),
-        "HOST" : env('DB_HOST'),
-        "PORT" : '5432',
+        'ENGINE': env('ENGINE'),
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
     }
 }
 
