@@ -7,10 +7,10 @@ env = environ.Env()
 BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, True)
+    DEBUG=(bool, False)
 )
 # Take environment variables from .env file
-environ.Env.read_env(BASE_DIR/'.env')
+environ.Env.read_env('.env')
 # False if not in os.environ because of casting above
 DEBUG = env('DEBUG')
 SECRET_KEY = env('SECRET_KEY')
