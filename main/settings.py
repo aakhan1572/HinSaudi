@@ -3,8 +3,9 @@ from pathlib import Path
 #from decouple import config
 import os
 import environ
-
-#from django import conf
+import locale
+from decouple import config
+config.encoding = locale.getpreferredencoding(False)
 
 env = environ.Env()
 
@@ -15,7 +16,7 @@ env = environ.Env()
 #environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+"""
 env = environ.Env(
     # set casting, default value
     DEBUG=(bool, True)
@@ -25,7 +26,9 @@ environ.Env.read_env(BASE_DIR/'.env')
 # False if not in os.environ because of casting above
 DEBUG = env('DEBUG')
 SECRET_KEY = env('SECRET_KEY')
-
+"""
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = ['*']
 #ALLOWED_HOSTS = ['https://www.hydinsaudi.com/', 'https://web-production-8948.up.railway.app/','https://web-production-9ba7.up.railway.app','127.0.0.1', 'localhost']
 
@@ -93,16 +96,16 @@ WSGI_APPLICATION = "main.wsgi.application"
 
 DATABASES = {
     "default": {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DATABASE_NAME'),
-        'USER': os.environ.get('DATABASE_USER'),
-        'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
-        'HOST': os.environ.get('DATABASE_HOST'),
-        "PORT" : '5432',
+        'ENGINE': config('ENGINE',default='django.db.backends.postgresql'),
+        'NAME': config('DATABASE_NAME'),
+        'USER': config('DATABASE_USER'),
+        'PASSWORD': config('DATABASE_PASSWORD'),
+        'HOST': config('DATABASE_HOST'),
+        "PORT" : config('PORT',default='5432',cast=int),
     }
 }
 
-AUTH_USER_MODEL = os.environ.get('AUTH_USER_MODEL')
+AUTH_USER_MODEL = config('AUTH_USER_MODEL')
 
 #STATICFILES_STORAGE= config('STATICFILES_STORAGE')
 # Password validation
@@ -153,19 +156,19 @@ MESSAGE_TAGS = {
 }
 
 # Email configuration
-GOOGLE_API_KEY = env('GOOGLE_API_KEY')
-EMAIL_BACKEND=env('EMAIL_BACKEND')
-EMAIL_HOST=env('EMAIL_HOST')
+GOOGLE_API_KEY = config('GOOGLE_API_KEY')
+EMAIL_BACKEND=config('EMAIL_BACKEND')
+EMAIL_HOST=config('EMAIL_HOST')
 #EMAIL_PORT=env('EMAIL_PORT', cast=int)
-EMAIL_PORT=587
-EMAIL_HOST_USER=env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD=env('EMAIL_HOST_PASSWORD')
+EMAIL_PORT=config('EMAIL_PORT',default=587,cast=int)
+EMAIL_HOST_USER=config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD=config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS=True
-DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 SECURE_CROSS_ORIGIN_OPENER_POLICY='same-origin-allow-popups'
 DEFAULT_AUTO_FIELD="django.db.models.BigAutoField"
-RZP_KEY_ID=env('RZP_KEY_ID')
-RZP_KEY_SECRET=env('RZP_KEY_SECRET')
+RZP_KEY_ID=config('RZP_KEY_ID')
+RZP_KEY_SECRET=config('RZP_KEY_SECRET')
 SECURE_CROSS_ORIGIN_OPENER_POLICY='same-origin-allow-popups'
 DEFAULT_AUTO_FIELD="django.db.models.BigAutoField"
 
@@ -180,15 +183,15 @@ SECURE_HSTS_SECONDS=31536000 # > 6 months (197 days)
 SECURE_HSTS_INCLUDE_SUBDOMAINS=True
 SECURE_HSTS_PRELOAD=True
 #DEFAULT_FILE_STORAGE = env('DEFAULT_FILE_STORAGE')
-AWS_ACCESS_KEY_ID=env('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY=env('AWS_SECRET_ACCESS_KEY')
-AWS_S3_BUCKET_NAME=env('AWS_S3_BUCKET_NAME')
-AWS_S3_REGION_NAME=env('AWS_S3_REGION_NAME')
-AWS_STORAGE_BUCKET_NAME=env('AWS_STORAGE_BUCKET_NAME')
-DEFAULT_FILE_STORAGE=env('DEFAULT_FILE_STORAGE')
-STATICFILES_STORAGE=env('STATICFILES_STORAGE')
+AWS_ACCESS_KEY_ID=config('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY=config('AWS_SECRET_ACCESS_KEY')
+AWS_S3_BUCKET_NAME=config('AWS_S3_BUCKET_NAME')
+AWS_S3_REGION_NAME=config('AWS_S3_REGION_NAME')
+AWS_STORAGE_BUCKET_NAME=config('AWS_STORAGE_BUCKET_NAME')
+DEFAULT_FILE_STORAGE=config('DEFAULT_FILE_STORAGE')
+STATICFILES_STORAGE=config('STATICFILES_STORAGE')
 #AWS_S3_CUSTOM_DOMAIN=env('AWS_S3_CUSTOM_DOMAIN')
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN= '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 #print(f"AWS_SECRET_ACCESS_KEY = {AWS_SECRET_ACCESS_KEY}")
 
 """ 
