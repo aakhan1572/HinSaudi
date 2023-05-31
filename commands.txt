@@ -379,6 +379,39 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 
+(HinSaudi) C:\HinSaudi>mkcert cert file-file cert.pem key-file key.pem localhost 127.0.0.1
+Note: the local CA is not installed in the system trust store.
+Run "mkcert -install" for certificates to be trusted automatically ⚠️
+
+Created a new certificate valid for the following names 📜
+ - "cert"
+ - "file-file"
+ - "cert.pem"
+ - "key-file"
+ - "key.pem"
+ - "localhost"
+ - "127.0.0.1"
+
+The certificate is at "./cert+6.pem" and the key at "./cert+6-key.pem" ✅
+
+It will expire on 31 August 2025 🗓
+
+
+(HinSaudi) C:\HinSaudi>pip install django_extensions Werkzeug
+Requirement already satisfied: django_extensions in c:\hinsaudi\lib\site-packages (3.2.1)
+Collecting Werkzeug
+  Using cached Werkzeug-2.3.4-py3-none-any.whl (242 kB)
+Requirement already satisfied: Django>=3.2 in c:\hinsaudi\lib\site-packages (from django_extensions) (4.2.1)
+Requirement already satisfied: MarkupSafe>=2.1.1 in c:\hinsaudi\lib\site-packages (from Werkzeug) (2.1.2)
+Requirement already satisfied: asgiref<4,>=3.6.0 in c:\hinsaudi\lib\site-packages (from Django>=3.2->django_extensions) (3.7.2)
+Requirement already satisfied: sqlparse>=0.3.1 in c:\hinsaudi\lib\site-packages (from Django>=3.2->django_extensions) (0.4.4)
+Requirement already satisfied: tzdata in c:\hinsaudi\lib\site-packages (from Django>=3.2->django_extensions) (2023.3)
+Requirement already satisfied: typing-extensions>=4 in c:\hinsaudi\lib\site-packages (from asgiref<4,>=3.6.0->Django>=3.2->django_extensions) (4.6.2)
+Installing collected packages: Werkzeug
+Successfully installed Werkzeug-2.3.4
+
+(HinSaudi) C:\HinSaudi>
+
 
 
 
