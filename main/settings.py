@@ -102,7 +102,7 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = env('AUTH_USER_MODEL')
+AUTH_USER_MODEL = os.environ.get('AUTH_USER_MODEL')
 
 #STATICFILES_STORAGE= config('STATICFILES_STORAGE')
 # Password validation
