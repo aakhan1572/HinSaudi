@@ -12,8 +12,24 @@ env = environ.Env(
 # Take environment variables from .env file
 environ.Env.read_env('.env')
 # False if not in os.environ because of casting above
+
+
+
 DEBUG= env('DEBUG')
-SECRET_KEY= env('SECRET_KEY')
+#SECRET_KEY= env('SECRET_KEY')
+
+from pathlib import Path
+from django.core.exceptions import ImproperlyConfigured
+def get_env_variable(var_name):
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        error_msg = "set the %s environment variable" % var_name
+        raise ImproperlyConfigured(error_msg)
+
+
+SECRET_KEY = get_env_variable('SECRET_KEY')
+
 
 ALLOWED_HOSTS= ['*']
 #ALLOWED_HOSTS = ['https://www.hydinsaudi.com/', 'https://web-production-8948.up.railway.app/','https://web-production-9ba7.up.railway.app','127.0.0.1', 'localhost']
