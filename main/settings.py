@@ -191,10 +191,12 @@ AWS_STORAGE_BUCKET_NAME=config('AWS_STORAGE_BUCKET_NAME')
 DEFAULT_FILE_STORAGE=config('DEFAULT_FILE_STORAGE')
 STATICFILES_STORAGE=config('STATICFILES_STORAGE')
 #AWS_S3_CUSTOM_DOMAIN=env('AWS_S3_CUSTOM_DOMAIN')
-AWS_S3_CUSTOM_DOMAIN= '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+#AWS_S3_CUSTOM_DOMAIN= '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 #print(f"AWS_SECRET_ACCESS_KEY = {AWS_SECRET_ACCESS_KEY}")
 
 
+"""
 # SITE SECURITY (security)
 SECURE_SSL_REDIRECT = False
 if DEBUG is False:
@@ -243,9 +245,9 @@ else:
             'PASSWORD': env('LDB_PASSWORD'),
             'HOST': env('LDB_HOST'),
         }
-    } """
+    }"""
 
-
+"""
 #print(f"SECURE_SSL_REDIRECT = {SECURE_SSL_REDIRECT}")
 #print(f"SECRET_KEY = {SECRET_KEY}")
 
@@ -254,7 +256,7 @@ else:
 #else:
 #    print('False')
 
-"""
+
 # Following setting for http 
 # python manage.py runserver 8080
 
