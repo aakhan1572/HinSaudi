@@ -28,7 +28,7 @@ DEBUG = env('DEBUG')
 SECRET_KEY = env('SECRET_KEY')
 """
 SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 #ALLOWED_HOSTS = ['https://www.hydinsaudi.com/', 'https://web-production-8948.up.railway.app/','https://web-production-9ba7.up.railway.app','127.0.0.1', 'localhost']
 
@@ -101,7 +101,7 @@ DATABASES = {
         'USER': config('DATABASE_USER'),
         'PASSWORD': config('DATABASE_PASSWORD'),
         'HOST': config('DATABASE_HOST'),
-        "PORT" : config('PORT',default='5432',cast=int),
+        "PORT" : 5432
     }
 }
 
@@ -160,7 +160,7 @@ GOOGLE_API_KEY = config('GOOGLE_API_KEY')
 EMAIL_BACKEND=config('EMAIL_BACKEND')
 EMAIL_HOST=config('EMAIL_HOST')
 #EMAIL_PORT=env('EMAIL_PORT', cast=int)
-EMAIL_PORT=config('EMAIL_PORT',default=587,cast=int)
+EMAIL_PORT=587
 EMAIL_HOST_USER=config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD=config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS=True
@@ -194,7 +194,6 @@ STATICFILES_STORAGE=config('STATICFILES_STORAGE')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 #AWS_S3_CUSTOM_DOMAIN= '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 #print(f"AWS_SECRET_ACCESS_KEY = {AWS_SECRET_ACCESS_KEY}")
-
 
 """
 # SITE SECURITY (security)
