@@ -27,9 +27,9 @@ environ.Env.read_env(BASE_DIR/'.env')
 DEBUG = env('DEBUG')
 SECRET_KEY = env('SECRET_KEY')
 """
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = False
-ALLOWED_HOSTS = ['*']
+SECRET_KEY= config('SECRET_KEY')
+DEBUG= False
+ALLOWED_HOSTS= ['*']
 #ALLOWED_HOSTS = ['https://www.hydinsaudi.com/', 'https://web-production-8948.up.railway.app/','https://web-production-9ba7.up.railway.app','127.0.0.1', 'localhost']
 
 # Application definition
@@ -156,7 +156,7 @@ MESSAGE_TAGS = {
 }
 
 # Email configuration
-GOOGLE_API_KEY = config('GOOGLE_API_KEY')
+GOOGLE_API_KEY= config('GOOGLE_API_KEY')
 EMAIL_BACKEND=config('EMAIL_BACKEND')
 EMAIL_HOST=config('EMAIL_HOST')
 #EMAIL_PORT=env('EMAIL_PORT', cast=int)
