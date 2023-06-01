@@ -1,5 +1,5 @@
 from pathlib import Path
-
+import dj_database_url
 #from decouple import config
 import os
 import environ
@@ -102,19 +102,23 @@ PGUSER=env('PGUSER')
 PGPASSWORD=env('PGPASSWORD')
 PGNAME=env('PGNAME')
 
-"""
+
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('PGNAME'),
+        'NAME': env('PGDATABASE'),
         'USER': env('PGUSER'),
         'PASSWORD': env('PGPASSWORD'),
         'HOST': env('PGHOST'),
         "PORT" : 5876,
     }
 }
+"""
+DATABASES = {
+    "default": dj_database_url.config(default=env("DATABASE_URL"), conn_max_age=1800),
+}
 
-
+CSRF_TRUSTED_ORIGINS= ["https://web-production-c07f.up.railway.app"]
 AUTH_USER_MODEL= env('AUTH_USER_MODEL')
 
 #STATICFILES_STORAGE= config('STATICFILES_STORAGE')

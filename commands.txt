@@ -438,6 +438,20 @@ Press CTRL+C to quit
 Performing system checks...
 
 
+(HinSaudi) C:\HinSaudi>pip install dj-database-url
+Collecting dj-database-url
+  Using cached dj_database_url-2.0.0-py3-none-any.whl (7.6 kB)
+Requirement already satisfied: Django>=3.2 in c:\hinsaudi\lib\site-packages (from dj-database-url) (4.2.1)
+Requirement already satisfied: typing-extensions>=3.10.0.0 in c:\hinsaudi\lib\site-packages (from dj-database-url) (4.6.2)
+Requirement already satisfied: asgiref<4,>=3.6.0 in c:\hinsaudi\lib\site-packages (from Django>=3.2->dj-database-url) (3.7.2)
+Requirement already satisfied: sqlparse>=0.3.1 in c:\hinsaudi\lib\site-packages (from Django>=3.2->dj-database-url) (0.4.4)
+Requirement already satisfied: tzdata in c:\hinsaudi\lib\site-packages (from Django>=3.2->dj-database-url) (2023.3)
+Installing collected packages: dj-database-url
+Successfully installed dj-database-url-2.0.0
+
+(HinSaudi) C:\HinSaudi>
+
+
 
 
 
