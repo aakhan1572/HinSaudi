@@ -97,7 +97,6 @@ DATABASES = {
     }
 }
 
-PGENGINE=env('PGENGINE')
 PGHOST=env('PGHOST')
 PGPORT=env('PGPORT')
 PGUSER=env('PGUSER')
