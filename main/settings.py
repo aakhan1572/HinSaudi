@@ -85,7 +85,7 @@ WSGI_APPLICATION = "main.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+"""
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql',
@@ -96,12 +96,24 @@ DATABASES = {
         "PORT" : 5432,
     }
 }
-
 PGHOST=env('PGHOST')
 PGPORT=env('PGPORT')
 PGUSER=env('PGUSER')
 PGPASSWORD=env('PGPASSWORD')
 PGNAME=env('PGNAME')
+
+"""
+DATABASES = {
+    "default": {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env('RAILWAY_NAME'),
+        'USER': env('RAILWAY_USER'),
+        'PASSWORD': env('RAILWAY_PASSWORD'),
+        'HOST': env('RAILWAY_HOST'),
+        "PORT" : 5876,
+    }
+}
+
 
 AUTH_USER_MODEL= env('AUTH_USER_MODEL')
 

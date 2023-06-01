@@ -410,9 +410,32 @@ Requirement already satisfied: typing-extensions>=4 in c:\hinsaudi\lib\site-pack
 Installing collected packages: Werkzeug
 Successfully installed Werkzeug-2.3.4
 
+
 (HinSaudi) C:\HinSaudi>
 
+(HinSaudi) C:\HinSaudi>python manage.py runserver_plus  --cert-file cert+6.pem --key-file cert+6-key.pem
+CommandError: Python OpenSSL Library is required to use runserver_plus with ssl support. Install via pip (pip install pyOpenSSL).
 
+(HinSaudi) C:\HinSaudi>pip install pyOpenSSL
+Collecting pyOpenSSL
+  Downloading pyOpenSSL-23.2.0-py3-none-any.whl (59 kB)
+     ---------------------------------------- 59.0/59.0 kB 1.6 MB/s eta 0:00:00
+Collecting cryptography!=40.0.0,!=40.0.1,<42,>=38.0.0 (from pyOpenSSL)
+  Downloading cryptography-41.0.0-cp37-abi3-win_amd64.whl (2.6 MB)
+     ---------------------------------------- 2.6/2.6 MB 3.4 MB/s eta 0:00:00
+Collecting cffi>=1.12 (from cryptography!=40.0.0,!=40.0.1,<42,>=38.0.0->pyOpenSSL)
+  Using cached cffi-1.15.1-cp39-cp39-win_amd64.whl (179 kB)
+Collecting pycparser (from cffi>=1.12->cryptography!=40.0.0,!=40.0.1,<42,>=38.0.0->pyOpenSSL)
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Installing collected packages: pycparser, cffi, cryptography, pyOpenSSL
+Successfully installed cffi-1.15.1 cryptography-41.0.0 pyOpenSSL-23.2.0 pycparser-2.21
+
+(HinSaudi) C:\HinSaudi>python manage.py runserver_plus  --cert-file cert+6.pem --key-file cert+6-key.pem
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on https://127.0.0.1:8000
+Press CTRL+C to quit
+ * Restarting with stat
+Performing system checks...
 
 
 

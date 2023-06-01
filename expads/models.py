@@ -9,20 +9,20 @@ from django.dispatch import receiver
 from phonenumber_field.modelfields import PhoneNumberField
 
 class Countrycode(models.Model):
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128, unique=True)
     
     def __str__(self):
          return self.name
 
 class Purpose(models.Model):
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128,unique=True)
 
     def __str__(self):
          return self.name
 
 
 class CityCode(models.Model):
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128,unique=True)
     countrycode = models.ForeignKey(Countrycode, on_delete=models.CASCADE, related_name='countrycode')
 
     def __str__(self):
@@ -46,7 +46,7 @@ class SubLocationCode(models.Model):
 
 
 class Category(models.Model):
-    name = models.CharField(max_length = 150 , null = False)
+    name = models.CharField(max_length = 150 , null = False,unique=True)
     slug = models.CharField(max_length = 150 , null = False , unique = True)
     thumbnail = models.ImageField(upload_to='users/thumnail', blank=True, null=True)   
     created = models.DateTimeField(auto_now_add=True)
