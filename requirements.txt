@@ -3,7 +3,9 @@ boto3==1.26.142
 botocore==1.29.142
 branca==0.6.0
 certifi==2023.5.7
+cffi==1.15.1
 charset-normalizer==3.1.0
+cryptography==41.0.0
 Django==4.2.1
 django-countries==7.5.1
 django-environ==0.10.0
@@ -25,6 +27,8 @@ numpy==1.24.3
 phonenumbers==8.13.13
 Pillow==9.5.0
 psycopg2==2.9.6
+pycparser==2.21
+pyOpenSSL==23.2.0
 python-dateutil==2.8.2
 python-decouple==3.8
 python-dotenv==1.0.0
