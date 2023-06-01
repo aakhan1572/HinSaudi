@@ -96,12 +96,6 @@ DATABASES = {
         "PORT" : 5432,
     }
 }
-PGHOST=env('PGHOST')
-PGPORT=env('PGPORT')
-PGUSER=env('PGUSER')
-PGPASSWORD=env('PGPASSWORD')
-PGNAME=env('PGNAME')
-
 
 DATABASES = {
     "default": {
