@@ -106,10 +106,10 @@ PGNAME=env('PGNAME')
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('RAILWAY_NAME'),
-        'USER': env('RAILWAY_USER'),
-        'PASSWORD': env('RAILWAY_PASSWORD'),
-        'HOST': env('RAILWAY_HOST'),
+        'NAME': env('PGNAME'),
+        'USER': env('PGUSER'),
+        'PASSWORD': env('PGPASSWORD'),
+        'HOST': env('PGHOST'),
         "PORT" : 5876,
     }
 }
