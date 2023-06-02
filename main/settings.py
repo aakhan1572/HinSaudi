@@ -27,7 +27,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'django.contrib.humanize',
     "phonenumber_field",
-    'django_countries',
     'sorl.thumbnail',
     'widget_tweaks',
     'django_filters',
