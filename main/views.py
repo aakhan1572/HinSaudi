@@ -1,7 +1,7 @@
 from django.shortcuts import render
 #from main.forms import ExpatadFilterform
 from expads.models import Expatad
-from .filters import Expatadfilter
+from main.filters import Expatadfilter
 
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
