@@ -16,6 +16,7 @@ environ.Env.read_env(BASE_DIR/'.env')
 DEBUG= env('DEBUG')
 SECRET_KEY= env('SECRET_KEY')
 ALLOWED_HOSTS= ['*']
+
 #ALLOWED_HOSTS = ['https://www.hydinsaudi.com/', 'https://web-production-8948.up.railway.app/','https://web-production-9ba7.up.railway.app','127.0.0.1', 'localhost']
 
 INSTALLED_APPS = [
