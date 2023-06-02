@@ -1,6 +1,5 @@
 from pathlib import Path
 import dj_database_url
-#from decouple import config
 import os
 import environ
 env = environ.Env()
@@ -14,17 +13,10 @@ env = environ.Env(
 )
 # Take environment variables from .env file
 environ.Env.read_env(BASE_DIR/'.env')
-# False if not in os.environ because of casting above
-
-
-
 DEBUG= env('DEBUG')
 SECRET_KEY= env('SECRET_KEY')
-
 ALLOWED_HOSTS= ['*']
 #ALLOWED_HOSTS = ['https://www.hydinsaudi.com/', 'https://web-production-8948.up.railway.app/','https://web-production-9ba7.up.railway.app','127.0.0.1', 'localhost']
-
-# Application definition
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -81,44 +73,12 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "main.wsgi.application"
-
-
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-"""
-DATABASES = {
-    "default": {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DATABASE_NAME'),
-        'USER': env('DATABASE_USER'),
-        'PASSWORD': env('DATABASE_PASSWORD'),
-        'HOST': env('DATABASE_HOST'),
-        "PORT" : 5432,
-    }
-}
-
-DATABASES = {
-    "default": {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('PGDATABASE'),
-        'USER': env('PGUSER'),
-        'PASSWORD': env('PGPASSWORD'),
-        'HOST': env('PGHOST'),
-        "PORT" : 5876,
-    }
-}
-"""
 DATABASES = {
     "default": dj_database_url.config(default=env("DATABASE_URL"), conn_max_age=1800),
 }
 
 CSRF_TRUSTED_ORIGINS= ["https://web-production-c07f.up.railway.app"]
 AUTH_USER_MODEL= env('AUTH_USER_MODEL')
-
-#gunicorn main.wsgi --log-file -
-#STATICFILES_STORAGE= config('STATICFILES_STORAGE')
-# Password validation
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -128,10 +88,6 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",},
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
 ]
-
-
-# Internationalization
-# https://docs.djangoproject.com/en/4.1/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
 
@@ -152,12 +108,7 @@ STATICFILES_DIRS=[os.path.join(BASE_DIR,"static")]
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=BASE_DIR/'media'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
 
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
@@ -168,7 +119,6 @@ MESSAGE_TAGS = {
 GOOGLE_API_KEY= env('GOOGLE_API_KEY')
 EMAIL_BACKEND=env('EMAIL_BACKEND')
 EMAIL_HOST=env('EMAIL_HOST')
-#EMAIL_PORT=env('EMAIL_PORT', cast=int)
 EMAIL_PORT=587,
 EMAIL_HOST_USER=env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD=env('EMAIL_HOST_PASSWORD')
@@ -180,20 +130,14 @@ RZP_KEY_ID=env('RZP_KEY_ID')
 RZP_KEY_SECRET=env('RZP_KEY_SECRET')
 SECURE_CROSS_ORIGIN_OPENER_POLICY='same-origin-allow-popups'
 DEFAULT_AUTO_FIELD="django.db.models.BigAutoField"
-
-
 CSRF_COOKIE_SECURE=True
 SECURE_CONTENT_TYPE_NOSNIFF=True
 SECURE_BROWSER_XSS_FILTER=True
 SESSION_COOKIE_SECURE=True
-#USE_X_FORWARDED_HOST=True
-#X_FRAME_OPTIONS = 'DENY'
 SECURE_SSL_REDIRECT=True
-SECURE_HSTS_SECONDS=31536000 # > 6 months (197 days)
+SECURE_HSTS_SECONDS=31536000 
 SECURE_HSTS_INCLUDE_SUBDOMAINS=True
 SECURE_HSTS_PRELOAD=True
-#DEFAULT_FILE_STORAGE = env('DEFAULT_FILE_STORAGE')
-
 AWS_ACCESS_KEY_ID=env('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY=env('AWS_SECRET_ACCESS_KEY')
 AWS_S3_BUCKET_NAME=env('AWS_S3_BUCKET_NAME')
@@ -201,11 +145,7 @@ AWS_S3_REGION_NAME=env('AWS_S3_REGION_NAME')
 AWS_STORAGE_BUCKET_NAME=env('AWS_STORAGE_BUCKET_NAME')
 DEFAULT_FILE_STORAGE=env('DEFAULT_FILE_STORAGE')
 STATICFILES_STORAGE=env('STATICFILES_STORAGE')
-#AWS_S3_CUSTOM_DOMAIN=env('AWS_S3_CUSTOM_DOMAIN')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-#AWS_S3_CUSTOM_DOMAIN= '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-#print(f"AWS_SECRET_ACCESS_KEY = {AWS_SECRET_ACCESS_KEY}")
-
 """
 # SITE SECURITY (security)
 SECURE_SSL_REDIRECT = False
