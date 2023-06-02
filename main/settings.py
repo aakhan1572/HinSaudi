@@ -11,6 +11,7 @@ env = environ.Env(
     AUTH_USER_MODEL=str
 
 )
+
 # Take environment variables from .env file
 environ.Env.read_env(BASE_DIR/'.env')
 DEBUG= env('DEBUG')
@@ -133,6 +134,7 @@ AWS_STORAGE_BUCKET_NAME=env('AWS_STORAGE_BUCKET_NAME')
 DEFAULT_FILE_STORAGE=env('DEFAULT_FILE_STORAGE')
 STATICFILES_STORAGE=env('STATICFILES_STORAGE')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
 
 
 """
