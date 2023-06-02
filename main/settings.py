@@ -115,6 +115,7 @@ DATABASES = {
 CSRF_TRUSTED_ORIGINS= ["https://web-production-c07f.up.railway.app"]
 AUTH_USER_MODEL= env('AUTH_USER_MODEL')
 
+#gunicorn main.wsgi --log-file -
 #STATICFILES_STORAGE= config('STATICFILES_STORAGE')
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -180,6 +181,7 @@ RZP_KEY_SECRET=env('RZP_KEY_SECRET')
 SECURE_CROSS_ORIGIN_OPENER_POLICY='same-origin-allow-popups'
 DEFAULT_AUTO_FIELD="django.db.models.BigAutoField"
 
+"""
 CSRF_COOKIE_SECURE=True
 SECURE_CONTENT_TYPE_NOSNIFF=True
 SECURE_BROWSER_XSS_FILTER=True
@@ -191,6 +193,17 @@ SECURE_HSTS_SECONDS=31536000 # > 6 months (197 days)
 SECURE_HSTS_INCLUDE_SUBDOMAINS=True
 SECURE_HSTS_PRELOAD=True
 #DEFAULT_FILE_STORAGE = env('DEFAULT_FILE_STORAGE')
+"""
+CORS_REPLACE_HTTPS_REFERER      = False
+HOST_SCHEME                     = "http://"
+SECURE_PROXY_SSL_HEADER         = None
+SECURE_SSL_REDIRECT             = False
+SESSION_COOKIE_SECURE           = False
+CSRF_COOKIE_SECURE              = False
+SECURE_HSTS_SECONDS             = None
+SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
+SECURE_FRAME_DENY               = False
+
 AWS_ACCESS_KEY_ID=env('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY=env('AWS_SECRET_ACCESS_KEY')
 AWS_S3_BUCKET_NAME=env('AWS_S3_BUCKET_NAME')
