@@ -16,9 +16,9 @@ env = environ.Env(
 environ.Env.read_env(BASE_DIR/'.env')
 DEBUG= env('DEBUG')
 SECRET_KEY= env('SECRET_KEY')
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
+#ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
 #ALLOWED_HOSTS=['web-production-c07f.up.railway.app','127.0.0.1','localhost','https://web-production-8948.up.railway.app']
-#ALLOWED_HOSTS=['web-production-c07f.up.railway.app','127.0.0.1','localhost']
+ALLOWED_HOSTS=['web-production-c07f.up.railway.app','www.web-production-c07f.up.railway.app','127.0.0.1','localhost']
 #ALLOWED_HOSTS = ['https://www.hydinsaudi.com/', 'https://web-production-8948.up.railway.app/','https://web-production-9ba7.up.railway.app','127.0.0.1', 'localhost']
 
 INSTALLED_APPS = [
@@ -76,7 +76,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "main.wsgi.application"
 DATABASES = {
-    "default": dj_database_url.config(default=env("DATABASE_URL"), conn_max_age=1800),
+    "default": dj_database_url.config(default=env("DATABASE_URL"), conn_max_age=1800,conn_health_checks=True),
 }
 
 CSRF_TRUSTED_ORIGINS= ["https://web-production-c07f.up.railway.app"]
