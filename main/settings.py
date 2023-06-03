@@ -18,7 +18,7 @@ DEBUG= env('DEBUG')
 SECRET_KEY= env('SECRET_KEY')
 #ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
 #ALLOWED_HOSTS=['web-production-c07f.up.railway.app','127.0.0.1','localhost','https://web-production-8948.up.railway.app']
-ALLOWED_HOSTS=['web-production-c07f.up.railway.app','web-production-c07f.up.railway.app/','127.0.0.1','localhost']
+ALLOWED_HOSTS=['HinSaudi.eba-rrrp5wpm.ap-south-1.elasticbeanstalk.com','web-production-c07f.up.railway.app','web-production-c07f.up.railway.app/','127.0.0.1','localhost']
 #ALLOWED_HOSTS = ['https://www.hydinsaudi.com/', 'https://web-production-8948.up.railway.app/','https://web-production-9ba7.up.railway.app','127.0.0.1', 'localhost']
 
 INSTALLED_APPS = [
@@ -138,6 +138,14 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 
 """
+
+ENGINE=django.db.backends.postgresql
+DB_NAME=hydinsaudiaws
+DB_USER=hydsuperuser
+DB_PASSWORD=Slv$1572$$$   or Slv1572slv1572#
+DB_HOST=hydinsaudiaws.ctznq7w54n8c.ap-south-1.rds.amazonaws.com
+DB_PORT=5432
+
 
 #SECURE_PROXY_SSL_HEADER= ('HTTP_X_FORWARDED_PROTO', 'https')
 SESSION_COOKIE_SECURE= True

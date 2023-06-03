@@ -451,6 +451,235 @@ Successfully installed dj-database-url-2.0.0
 
 (HinSaudi) C:\HinSaudi>
 
+(HinSaudi) C:\HinSaudi>pip install awsebcli
+Collecting awsebcli
+  Downloading awsebcli-3.20.6.tar.gz (268 kB)
+     ---------------------------------------- 268.4/268.4 kB 1.7 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Collecting botocore<1.29.100,>1.23.41 (from awsebcli)
+  Downloading botocore-1.29.99-py3-none-any.whl (10.5 MB)
+     ---------------------------------------- 10.5/10.5 MB 1.9 MB/s eta 0:00:00
+Collecting cement==2.8.2 (from awsebcli)
+  Downloading cement-2.8.2.tar.gz (165 kB)
+     ---------------------------------------- 165.8/165.8 kB 1.4 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+Collecting colorama<0.4.4,>=0.2.5 (from awsebcli)
+  Downloading colorama-0.4.3-py2.py3-none-any.whl (15 kB)
+Collecting pathspec==0.10.1 (from awsebcli)
+  Downloading pathspec-0.10.1-py3-none-any.whl (27 kB)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in c:\hinsaudi\lib\site-packages (from awsebcli) (2.8.2)
+Collecting requests<=2.26,>=2.20.1 (from awsebcli)
+  Downloading requests-2.26.0-py2.py3-none-any.whl (62 kB)
+     ---------------------------------------- 62.3/62.3 kB 3.3 MB/s eta 0:00:00
+Requirement already satisfied: setuptools>=20.0 in c:\hinsaudi\lib\site-packages (from awsebcli) (67.7.2)
+Collecting semantic_version==2.8.5 (from awsebcli)
+  Downloading semantic_version-2.8.5-py2.py3-none-any.whl (15 kB)
+Collecting six<1.15.0,>=1.11.0 (from awsebcli)
+  Downloading six-1.14.0-py2.py3-none-any.whl (10 kB)
+Collecting termcolor==1.1.0 (from awsebcli)
+  Downloading termcolor-1.1.0.tar.gz (3.9 kB)
+  Preparing metadata (setup.py) ... done
+Collecting wcwidth<0.2.0,>=0.1.7 (from awsebcli)
+  Downloading wcwidth-0.1.9-py2.py3-none-any.whl (19 kB)
+Collecting PyYAML<5.5,>=5.3.1 (from awsebcli)
+  Using cached PyYAML-5.4.1-cp39-cp39-win_amd64.whl (213 kB)
+Requirement already satisfied: urllib3>=1.26.5 in c:\hinsaudi\lib\site-packages (from awsebcli) (1.26.16)
+Collecting pypiwin32==223 (from awsebcli)
+  Downloading pypiwin32-223-py3-none-any.whl (1.7 kB)
+Collecting pywin32>=223 (from pypiwin32==223->awsebcli)
+  Downloading pywin32-306-cp39-cp39-win_amd64.whl (9.3 MB)
+     ---------------------------------------- 9.3/9.3 MB 2.0 MB/s eta 0:00:00
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in c:\hinsaudi\lib\site-packages (from botocore<1.29.100,>1.23.41->awsebcli) (1.0.1)
+Requirement already satisfied: certifi>=2017.4.17 in c:\hinsaudi\lib\site-packages (from requests<=2.26,>=2.20.1->awsebcli) (2023.5.7)
+Collecting charset-normalizer~=2.0.0 (from requests<=2.26,>=2.20.1->awsebcli)
+  Using cached charset_normalizer-2.0.12-py3-none-any.whl (39 kB)
+Requirement already satisfied: idna<4,>=2.5 in c:\hinsaudi\lib\site-packages (from requests<=2.26,>=2.20.1->awsebcli) (3.4)
+Building wheels for collected packages: awsebcli, cement, termcolor
+  Building wheel for awsebcli (setup.py) ... done
+  Created wheel for awsebcli: filename=awsebcli-3.20.6-py3-none-any.whl size=361054 sha256=4c8431fbc5657e7a57bbe5d2162d20fb25efc3df193ec00bf2613a23e7e41253
+  Stored in directory: c:\users\amjad\appdata\local\pip\cache\wheels\b9\af\a9\2efc487f3b5146728ca4ee944c8044e9710777e1938b9f530a
+  Building wheel for cement (setup.py) ... done
+  Created wheel for cement: filename=cement-2.8.2-py3-none-any.whl size=99517 sha256=27c29b55fd95201572744fc64aab62a4d73e85c0a8597e73f99e55e8c6eb96ca
+  Stored in directory: c:\users\amjad\appdata\local\pip\cache\wheels\85\d0\bd\0b0c9c00b98cc56399892889b9be920c7f5dc39fc812712a16
+  Building wheel for termcolor (setup.py) ... done
+  Created wheel for termcolor: filename=termcolor-1.1.0-py3-none-any.whl size=4855 sha256=320ed5902bd024fbb87f2cfdb84bff56446fd8d92dafb6b7d8f47b8608ea379f
+  Stored in directory: c:\users\amjad\appdata\local\pip\cache\wheels\b6\0d\90\0d1bbd99855f99cb2f6c2e5ff96f8023fad8ec367695f7d72d
+Successfully built awsebcli cement termcolor
+Installing collected packages: wcwidth, termcolor, pywin32, cement, six, semantic_version, PyYAML, pypiwin32, pathspec, colorama, charset-normalizer, requests, botocore, awsebcli
+  Attempting uninstall: six
+    Found existing installation: six 1.16.0
+    Uninstalling six-1.16.0:
+      Successfully uninstalled six-1.16.0
+  Attempting uninstall: charset-normalizer
+    Found existing installation: charset-normalizer 3.1.0
+    Uninstalling charset-normalizer-3.1.0:
+      Successfully uninstalled charset-normalizer-3.1.0
+  Attempting uninstall: requests
+    Found existing installation: requests 2.31.0
+    Uninstalling requests-2.31.0:
+      Successfully uninstalled requests-2.31.0
+  Attempting uninstall: botocore
+    Found existing installation: botocore 1.29.142
+    Uninstalling botocore-1.29.142:
+      Successfully uninstalled botocore-1.29.142
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+boto3 1.26.142 requires botocore<1.30.0,>=1.29.142, but you have botocore 1.29.99 which is incompatible.
+Successfully installed PyYAML-5.4.1 awsebcli-3.20.6 botocore-1.29.99 cement-2.8.2 charset-normalizer-2.0.12 colorama-0.4.3 pathspec-0.10.1 pypiwin32-223 pywin32-306 requests-2.26.0 semantic_version-2.8.5 six-1.14.0 termcolor-1.1.0 wcwidth-0.1.9
+
+
+
+(HinSaudi) C:\HinSaudi>eb --version
+EB CLI 3.20.6 (Python 3.9.7 (default, Sep 16 2021, 16:59:28) [MSC v.1916 64 bit (AMD64)])
+
+(HinSaudi) C:\HinSaudi>eb init -p python-3.9.7 HinSaudi
+You have not yet set up your credentials or your credentials are incorrect
+You must provide your credentials.
+Application HinSaudi has been created.
+ERROR: NotFoundError - Elastic Beanstalk can't find a platform version that matches "python-3.9.7".
+
+(HinSaudi) C:\HinSaudi>
+(HinSaudi) C:\HinSaudi>eb init
+
+Select a default region
+1) us-east-1 : US East (N. Virginia)
+2) us-west-1 : US West (N. California)
+3) us-west-2 : US West (Oregon)
+4) eu-west-1 : EU (Ireland)
+5) eu-central-1 : EU (Frankfurt)
+6) ap-south-1 : Asia Pacific (Mumbai)
+7) ap-southeast-1 : Asia Pacific (Singapore)
+8) ap-southeast-2 : Asia Pacific (Sydney)
+9) ap-northeast-1 : Asia Pacific (Tokyo)
+10) ap-northeast-2 : Asia Pacific (Seoul)
+11) sa-east-1 : South America (Sao Paulo)
+12) cn-north-1 : China (Beijing)
+13) cn-northwest-1 : China (Ningxia)
+14) us-east-2 : US East (Ohio)
+15) ca-central-1 : Canada (Central)
+16) eu-west-2 : EU (London)
+17) eu-west-3 : EU (Paris)
+18) eu-north-1 : EU (Stockholm)
+19) eu-south-1 : EU (Milano)
+20) ap-east-1 : Asia Pacific (Hong Kong)
+21) me-south-1 : Middle East (Bahrain)
+22) il-central-1 : Middle East (Israel)
+23) af-south-1 : Africa (Cape Town)
+24) ap-southeast-3 : Asia Pacific (Jakarta)
+25) ap-northeast-3 : Asia Pacific (Osaka)
+(default is 3): 6
+
+
+Enter Application Name
+(default is "HinSaudi"):
+Application HinSaudi has been created.
+
+It appears you are using Python. Is this correct?
+(Y/n): Y
+Select a platform branch.
+1) Python 3.11 running on 64bit Amazon Linux 2023
+2) Python 3.9 running on 64bit Amazon Linux 2023
+3) Python 3.8 running on 64bit Amazon Linux 2
+4) Python 3.7 running on 64bit Amazon Linux 2
+(default is 1): 2
+
+Do you wish to continue with CodeCommit? (Y/n): Y
+EB CLI does not have the right permissions to access CodeCommit. List of IAM policies needed by EB CLI, please configure and try again.
+ codecommit:CreateRepository
+ codecommit:CreateBranch
+ codecommit:GetRepository
+ codecommit:ListRepositories
+ codecommit:ListBranches
+To learn more, see Docs: http://docs.aws.amazon.com/codecommit/latest/userguide/access-permissions.html
+ERROR: ServiceError - User: arn:aws:iam::8249850:user/DjangoAppUser is not authorized to perform: codecommit:ListRepositories because no identity-based policy allows the codecommit:ListRepositories action
+
+(HinSaudi) C:\HinSaudi>
+(HinSaudi) C:\HinSaudi>eb init
+
+Select a default region
+1) us-east-1 : US East (N. Virginia)
+2) us-west-1 : US West (N. California)
+3) us-west-2 : US West (Oregon)
+4) eu-west-1 : EU (Ireland)
+5) eu-central-1 : EU (Frankfurt)
+6) ap-south-1 : Asia Pacific (Mumbai)
+7) ap-southeast-1 : Asia Pacific (Singapore)
+8) ap-southeast-2 : Asia Pacific (Sydney)
+9) ap-northeast-1 : Asia Pacific (Tokyo)
+10) ap-northeast-2 : Asia Pacific (Seoul)
+11) sa-east-1 : South America (Sao Paulo)
+12) cn-north-1 : China (Beijing)
+13) cn-northwest-1 : China (Ningxia)
+14) us-east-2 : US East (Ohio)
+15) ca-central-1 : Canada (Central)
+16) eu-west-2 : EU (London)
+17) eu-west-3 : EU (Paris)
+18) eu-north-1 : EU (Stockholm)
+19) eu-south-1 : EU (Milano)
+20) ap-east-1 : Asia Pacific (Hong Kong)
+21) me-south-1 : Middle East (Bahrain)
+22) il-central-1 : Middle East (Israel)
+23) af-south-1 : Africa (Cape Town)
+24) ap-southeast-3 : Asia Pacific (Jakarta)
+25) ap-northeast-3 : Asia Pacific (Osaka)
+(default is 3): 6
+
+
+Select an application to use
+1) HinSaudi
+2) [ Create new Application ]
+(default is 1): 1
+
+
+It appears you are using Python. Is this correct?
+(Y/n): Y
+Select a platform branch.
+1) Python 3.11 running on 64bit Amazon Linux 2023
+2) Python 3.9 running on 64bit Amazon Linux 2023
+3) Python 3.8 running on 64bit Amazon Linux 2
+4) Python 3.7 running on 64bit Amazon Linux 2
+(default is 1): 2
+
+Do you wish to continue with CodeCommit? (Y/n): Y
+
+Enter Repository Name
+(default is "origin"): HinSaudi
+Successfully created repository: HinSaudi
+
+Enter Branch Name
+***** Must have at least one commit to create a new branch with CodeCommit *****
+(default is "main"):
+Successfully created branch: main
+Do you want to set up SSH for your instances?
+(Y/n):
+
+Type a keypair name.
+(Default is aws-eb):
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in C:\Users\amjad\.ssh\aws-eb.
+Your public key has been saved in C:\Users\amjad\.ssh\aws-eb.pub.
+The key fingerprint is:
+SHA256:txkIC2QvfGcTFz5xqgKrZv3exfAjtTUeim33ZUU9e0c aws-eb
+The key's randomart image is:
++---[RSA 3072]----+
+|    o   . +..    |
+|   + .   + +    .|
+|    = + + +    .E|
+|     * = + .   oo|
+|    . o S + +  .+|
+|   o   . O O o  +|
+|  + .   o % o   o|
+| o   . . + o . o |
+|     .o .     .  |
++----[SHA256]-----+
+ERROR: NotAuthorizedError - Operation Denied. You are not authorized to perform this operation. Encoded authorization failure message: Kw_jjoC8oi9bkosSRdvM-Ed4kLYAcjrGWHJqqMr76zBEs5BLLd1GPB9hQ7xSR2CLyvZPxKTYm92bptcXAPzqsoCY1MeUCrJohIVZERKx9QjwM4s0YRVg8lL8901Z2X3HqU1DFqdRTmb1f1OqVDjrbEluyZKknpkTxHH7T4wuqeKHA20C9bsSqKHXHPUo90PMFEwJMaDiJek0FOhX3j6nm_2CWjKC4uEna89gaAENIDGaoN0qXk6jGq4WoxXKiCyEbLHaOhbG4v5HrcONLNXVONSi7LRO3q2uK1KNy0k2qYV-uej4FEUNXOQG1txo9vR97AkRUABaFUEZXymQuhIuEvgQbOp__DOvUVR2Uct2WtAKDjyLKP7mYqXI0tix-mMG7LmirUYvk20g-WJH2jI4UVthu-kOyLPEoFKBe_kmSGQAjhfhGytsPrFtuBsuysq32qTGgy7yVhsm__G-UkSlHKrQ8le1JtO4rRMaC-nYMlHtYaMFSXUlKiNMHThrf0mVwYVRZipwzzp1shL-JU4DdJlm
+
+(HinSaudi) C:\HinSaudi>
+
+
+
+
 
 
 
