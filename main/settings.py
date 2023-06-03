@@ -79,7 +79,7 @@ DATABASES = {
     "default": dj_database_url.config(default=env("DATABASE_URL"), conn_max_age=1800,conn_health_checks=True),
 }
 
-CSRF_TRUSTED_ORIGINS= ["https://web-production-c07f.up.railway.app"]
+#CSRF_TRUSTED_ORIGINS= ["https://web-production-c07f.up.railway.app"]
 AUTH_USER_MODEL= env('AUTH_USER_MODEL')
 
 AUTH_PASSWORD_VALIDATORS = [
